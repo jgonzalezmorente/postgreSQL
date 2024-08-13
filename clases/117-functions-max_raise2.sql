@@ -1,4 +1,4 @@
-CREATE OR REPLACE FUNCTION max_raise2 (empl_id int) 
+CREATE OR REPLACE FUNCTION max_raise2 (empl_id int)
 RETURNS NUMERIC(8, 2) as $$
 DECLARE	
 	employee_job_id INT;
