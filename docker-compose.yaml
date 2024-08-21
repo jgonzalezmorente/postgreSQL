@@ -1,4 +1,4 @@
-version: '3'
+# version: '3'
 
 services:
   myDB:
@@ -14,19 +14,19 @@ services:
     volumes:
       - ./postgres:/var/lib/postgresql/data
   
-  pgAdmin:
-    image: dpage/pgadmin4
-    container_name: pgadmin4
-    # restart: always
-    depends_on:
-      - myDB
-    ports:
-      - 8080:80
-    environment:
-      - PGADMIN_DEFAULT_EMAIL=alumno@google.com
-      - PGADMIN_DEFAULT_PASSWORD=123456
-    volumes:
-      - ./pgadmin:/var/lib/pgadmin
-      - ./pgadmin:/certs/server.cert
-      - ./pgadmin:/certs/server.key
-      - ./pgadmin:/pgadmin4/servers.json
+  # pgAdmin:
+  #   image: dpage/pgadmin4
+  #   container_name: pgadmin4
+  #   # restart: always
+  #   depends_on:
+  #     - myDB
+  #   ports:
+  #     - 8080:80
+  #   environment:
+  #     - PGADMIN_DEFAULT_EMAIL=alumno@google.com
+  #     - PGADMIN_DEFAULT_PASSWORD=123456
+  #   volumes:
+  #     - ./pgadmin:/var/lib/pgadmin
+  #     - ./pgadmin:/certs/server.cert
+  #     - ./pgadmin:/certs/server.key
+  #     - ./pgadmin:/pgadmin4/servers.json
